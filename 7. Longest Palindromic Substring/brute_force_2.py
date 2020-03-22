@@ -1,7 +1,7 @@
 # Time: O(n^3)     Time Limit Exceeded
 # Memory: O()   MB
 # I thought it would be better, but in fact it becomes worse
-# In fact, if you think the comparision step (is pa) is O(1), then this is an O(n^2)
+# In fact, if you think the comparison step (is pa) is O(1), then this is an O(n^2)
 
 from typing import *
 import math

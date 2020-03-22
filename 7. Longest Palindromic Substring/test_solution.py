@@ -6,6 +6,7 @@ from unittest import skip
 import brute_force_2
 import brute_force_1
 import brute_force_3
+import dp
 
 
 class TestSolution(TestCase):
@@ -13,7 +14,8 @@ class TestSolution(TestCase):
         bf1 = brute_force_1.Solution()
         bf2 = brute_force_2.Solution()
         bf3 = brute_force_3.Solution()
-        self.t = bf1
+        dynamic_programming = dp.Solution()
+        self.t = dynamic_programming
 
     def test_longestPalindrome(self):
         s = 'asfsa'
@@ -52,10 +54,9 @@ class TestSolution(TestCase):
         # bf1: 7.84s
         # bf2: 17.4s
         # bf3: 14s
+        # dp: 4.17s
 
         s = "esbtzjaaijqkgmtaajpsdfiqtvxsgfvijpxrvxgfumsuprzlyvhclgkhccmcnquukivlpnjlfteljvykbddtrpmxzcrdqinsnlsteonhcegtkoszzonkwjevlasgjlcquzuhdmmkhfniozhuphcfkeobturbuoefhmtgcvhlsezvkpgfebbdbhiuwdcftenihseorykdguoqotqyscwymtjejpdzqepjkadtftzwebxwyuqwyeegwxhroaaymusddwnjkvsvrwwsmolmidoybsotaqufhepinkkxicvzrgbgsarmizugbvtzfxghkhthzpuetufqvigmyhmlsgfaaqmmlblxbqxpluhaawqkdluwfirfngbhdkjjyfsxglsnakskcbsyafqpwmwmoxjwlhjduayqyzmpkmrjhbqyhongfdxmuwaqgjkcpatgbrqdllbzodnrifvhcfvgbixbwywanivsdjnbrgskyifgvksadvgzzzuogzcukskjxbohofdimkmyqypyuexypwnjlrfpbtkqyngvxjcwvngmilgwbpcsseoywetatfjijsbcekaixvqreelnlmdonknmxerjjhvmqiztsgjkijjtcyetuygqgsikxctvpxrqtuhxreidhwcklkkjayvqdzqqapgdqaapefzjfngdvjsiiivnkfimqkkucltgavwlakcfyhnpgmqxgfyjziliyqhugphhjtlllgtlcsibfdktzhcfuallqlonbsgyyvvyarvaxmchtyrtkgekkmhejwvsuumhcfcyncgeqtltfmhtlsfswaqpmwpjwgvksvazhwyrzwhyjjdbphhjcmurdcgtbvpkhbkpirhysrpcrntetacyfvgjivhaxgpqhbjahruuejdmaghoaquhiafjqaionbrjbjksxaezosxqmncejjptcksnoq"
         s = s+s
         s = s+s
-
-
         self.t.longestPalindrome(s)
