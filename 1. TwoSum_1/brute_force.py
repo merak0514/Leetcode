@@ -1,5 +1,8 @@
 # Time: O(n^2) 5264ms
 # Memory: O(1) 13.6MB
+from typing import *
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for k, i in enumerate(nums):

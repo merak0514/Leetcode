@@ -1,5 +1,7 @@
 # Time: O(n) 48ms
 # Memory: O(n) 14.3MB
+from typing import *
+
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
