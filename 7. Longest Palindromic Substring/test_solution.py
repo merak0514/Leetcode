@@ -7,6 +7,7 @@ import brute_force_2
 import brute_force_1
 import brute_force_3
 import dp
+import pointer
 
 
 class TestSolution(TestCase):
@@ -15,7 +16,8 @@ class TestSolution(TestCase):
         bf2 = brute_force_2.Solution()
         bf3 = brute_force_3.Solution()
         dynamic_programming = dp.Solution()
-        self.t = dynamic_programming
+        ce = pointer.Solution()
+        self.t = ce
 
     def test_longestPalindrome(self):
         s = 'asfsa'
@@ -60,7 +62,7 @@ class TestSolution(TestCase):
         # bf2: 17.4s
         # bf3: 14s
         # dp: 2.58s  using [False] * length is much faster than [False for _ in s]
-
+        # two_pointer: 0.03s
         s = "esbtzjaaijqkgmtaajpsdfiqtvxsgfvijpxrvxgfumsuprzlyvhclgkhccmcnquukivlpnjlfteljvykbddtrpmxzcrdqinsnlsteonhcegtkoszzonkwjevlasgjlcquzuhdmmkhfniozhuphcfkeobturbuoefhmtgcvhlsezvkpgfebbdbhiuwdcftenihseorykdguoqotqyscwymtjejpdzqepjkadtftzwebxwyuqwyeegwxhroaaymusddwnjkvsvrwwsmolmidoybsotaqufhepinkkxicvzrgbgsarmizugbvtzfxghkhthzpuetufqvigmyhmlsgfaaqmmlblxbqxpluhaawqkdluwfirfngbhdkjjyfsxglsnakskcbsyafqpwmwmoxjwlhjduayqyzmpkmrjhbqyhongfdxmuwaqgjkcpatgbrqdllbzodnrifvhcfvgbixbwywanivsdjnbrgskyifgvksadvgzzzuogzcukskjxbohofdimkmyqypyuexypwnjlrfpbtkqyngvxjcwvngmilgwbpcsseoywetatfjijsbcekaixvqreelnlmdonknmxerjjhvmqiztsgjkijjtcyetuygqgsikxctvpxrqtuhxreidhwcklkkjayvqdzqqapgdqaapefzjfngdvjsiiivnkfimqkkucltgavwlakcfyhnpgmqxgfyjziliyqhugphhjtlllgtlcsibfdktzhcfuallqlonbsgyyvvyarvaxmchtyrtkgekkmhejwvsuumhcfcyncgeqtltfmhtlsfswaqpmwpjwgvksvazhwyrzwhyjjdbphhjcmurdcgtbvpkhbkpirhysrpcrntetacyfvgjivhaxgpqhbjahruuejdmaghoaquhiafjqaionbrjbjksxaezosxqmncejjptcksnoq"
         s = s+s
         s = s+s
