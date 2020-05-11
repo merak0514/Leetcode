@@ -1,4 +1,4 @@
-# Time: O()     1228ms      16.86%
+# Time: O(n^2)     1228ms      16.86%
 # Memory: O()   74MB      %
 from typing import *
 
@@ -32,7 +32,6 @@ class Solution:
             t.time += 2 + self.tt(t.children[i])
         return t.time
 
-
     def minTime(self, n: int, edges: List[List[int]], hasApple: List[bool]) -> int:
         edges = sorted(edges)
         e_d = {}
@@ -47,7 +46,7 @@ class Solution:
         print(ttt)
         return ttt
 
+
 if __name__ == '__main__':
     s = Solution()
-    s.minTime(7,  [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], [0,0,1,0,1,1,0])
-
+    s.minTime(7, [[0, 1], [0, 2], [1, 4], [1, 5], [2, 3], [2, 6]], [0, 0, 1, 0, 1, 1, 0])
