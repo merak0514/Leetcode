@@ -44,7 +44,7 @@ class Solution:
         odd_end = head
         even_head = head.next
         even_tail = even_head
-        while even_tail and even_tail.next:
+        while even_tail and even_tail.next:  # Counterintuitively, even_head remains unchanged during the for loop
             odd_end.next = even_tail.next
             odd_end = odd_end.next
             even_tail.next = odd_end.next
