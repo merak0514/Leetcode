@@ -1,4 +1,4 @@
-# Time: O()     ms      %
+# Time: O(n)     ms      %
 # Memory: O()   MB      %
 from typing import *
 
